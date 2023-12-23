@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/page_background">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/top_relative_height">
+
+        <LinearLayout
+            android:id="@+id/app_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerInParent="true"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/app_name_cn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/app_name_cn"
+                android:textStyle="bold"
+                android:fontFamily="@font/hanyixiaomaitijian"
+                android:textSize="@dimen/app_name_size_big"
+                android:textColor="@color/black"/>
+
+            <TextView
+                android:id="@+id/app_name_en"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/app_name_en"
+                android:textStyle="bold|italic"
+                android:fontFamily="@font/itangiuhpersonaluseonly_pkezm"
+                android:textSize="@dimen/app_name_size_small"
+                android:textColor="@color/black"/>
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/app_logo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/logo_left_margin"
+            android:layout_marginTop="@dimen/logo_top_margin"
+            android:scaleType="centerCrop"
+            android:src="@drawable/logo" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/login_edit_box"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/box_margin_top"
+        android:layout_marginLeft="@dimen/box_margin_left"
+        android:layout_marginRight="@dimen/box_margin_right"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/login_account_edit_box"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/edit_box_height"
+            android:background="@drawable/edit_box_border"
+            android:layout_margin="@dimen/login_edit_box_margin"
+            android:paddingTop="@dimen/edit_box_padding_top"
+            android:paddingBottom="@dimen/edit_box_padding_bottom"
+            android:paddingLeft="@dimen/edit_box_padding_left"
+            android:paddingRight="@dimen/edit_box_padding_right"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/login_account_img"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginTop="@dimen/img_margin_top"
+                android:layout_marginBottom="@dimen/img_margin_bottom"
+                android:layout_marginLeft="@dimen/img_margin_left"
+                android:src="@drawable/account" />
+
+            <View
+                android:layout_width="@dimen/vertical_bar_width"
+                android:layout_height="@dimen/vertical_bar_height"
+                android:layout_gravity="center_vertical"
+                android:background="@color/black" />
+
+            <EditText
+                android:id="@+id/login_account_edit_text"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="@dimen/edit_text_margin_left"
+                android:hint="@string/login_account_hint_init"
+                android:inputType="phone"
+                style="@style/Edit_text"
+                tools:ignore="TouchTargetSizeCheck" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/login_pwd_edit_box"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/edit_box_height"
+            android:background="@drawable/edit_box_border"
+            android:layout_margin="@dimen/login_edit_box_margin"
+            android:paddingTop="@dimen/edit_box_padding_top"
+            android:paddingBottom="@dimen/edit_box_padding_bottom"
+            android:paddingLeft="@dimen/edit_box_padding_left"
+            android:paddingRight="@dimen/edit_box_padding_right"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/login_pwd_img"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginTop="@dimen/img_margin_top"
+                android:layout_marginBottom="@dimen/img_margin_bottom"
+                android:layout_marginLeft="@dimen/img_margin_left"
+                android:src="@drawable/password" />
+
+            <View
+                android:layout_width="@dimen/vertical_bar_width"
+                android:layout_height="@dimen/vertical_bar_height"
+                android:layout_gravity="center_vertical"
+                android:background="@color/black" />
+
+            <EditText
+                android:id="@+id/login_pwd_edit_text"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="@dimen/edit_text_margin_left"
+                android:hint="@string/pwd_hint_init"
+                android:inputType="textPassword"
+                style="@style/Edit_text"
+                tools:ignore="TouchTargetSizeCheck" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/login_reminders"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="@dimen/login_reminders_margin_top"
+            android:layout_gravity="center">
+
+            <android.widget.Button
+                android:id="@+id/register_reminder"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/register_margin_top"
+                style="@style/Register_Reminder_Button"/>
+
+            <View
+                android:layout_width="@dimen/vertical_bar_width"
+                android:layout_height="@dimen/vertical_bar_height"
+                android:layout_gravity="center_vertical"
+                android:background="@color/hint_color"
+                />
+
+            <android.widget.Button
+                android:id="@+id/forget_pwd_reminder"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/register_margin_top"
+                style="@style/Forget_Pwd_Reminder_Button"/>
+        </LinearLayout>
+
+        <android.widget.Button
+            android:id="@+id/login_btn"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/edit_box_height"
+            android:layout_marginTop="@dimen/login_btn_margin_top"
+            android:text="@string/login_btn_text"
+            style="@style/Gradient_Rounded_Rectangle_Button"/>
+    </LinearLayout>
+</LinearLayout>

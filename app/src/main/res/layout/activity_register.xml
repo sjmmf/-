@@ -1,0 +1,235 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:background="@color/my_light_primary">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/register_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/return_bar_height"
+        android:background="@color/my_light_primary">
+
+        <ImageButton
+            android:id="@+id/register_return_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/my_light_primary"
+            android:src="@drawable/return_btn"
+            tools:ignore="SpeakableTextPresentCheck"
+            android:clickable="true"/>
+
+        <TextView
+            android:id="@+id/register_return_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/return_bar"
+            android:textSize="@dimen/return_bar_text_size"
+            android:textColor="@color/white"
+            android:layout_marginLeft="@dimen/return_bar_text_margin_left"/>
+    </androidx.appcompat.widget.Toolbar>
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        style="@style/Rounded_Rectangle_Linear"
+        android:layout_marginTop="50dp">
+
+        <TextView
+            android:id="@+id/register_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/register_title_margin_top"
+            android:layout_marginLeft="@dimen/register_title_margin_left"
+            android:text="@string/register_title"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:textSize="@dimen/register_title_size"
+            android:fontFamily="@font/ruiziyunzikukaiti">
+        </TextView>
+
+        <TextView
+            android:id="@+id/register_sub_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/register_sub_title_margin_top"
+            android:layout_marginLeft="@dimen/register_sub_title_margin_left"
+            android:text="@string/register_sub_title"
+            android:textSize="@dimen/register_sub_title_size"
+            android:textColor="@color/teal_700"
+            android:textStyle="bold|italic"
+            android:fontFamily="@font/ruimeijiazhangqingpingyingbikaishu">
+        </TextView>
+
+        <LinearLayout
+            android:id="@+id/register_username_edit_box"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/edit_box_height"
+            android:background="@drawable/edit_box_border"
+            android:layout_marginTop="@dimen/register_edit_box_margin_top"
+            android:layout_marginLeft="@dimen/register_edit_box_margin_left"
+            android:layout_marginRight="@dimen/register_edit_box_margin_right"
+            android:paddingTop="@dimen/edit_box_padding_top"
+            android:paddingBottom="@dimen/edit_box_padding_bottom"
+            android:paddingLeft="@dimen/edit_box_padding_left"
+            android:paddingRight="@dimen/edit_box_padding_right"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/register_username_img"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginTop="@dimen/img_margin_top"
+                android:layout_marginBottom="@dimen/img_margin_bottom"
+                android:layout_marginLeft="@dimen/img_margin_left"
+                android:src="@drawable/username" />
+
+            <View
+                android:layout_width="@dimen/vertical_bar_width"
+                android:layout_height="@dimen/vertical_bar_height"
+                android:layout_gravity="center_vertical"
+                android:background="@color/black" />
+
+            <EditText
+                android:id="@+id/register_username_edit_text"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="@dimen/edit_text_margin_left"
+                android:hint="@string/register_username_hint"
+                android:inputType="text"
+                style="@style/Edit_text"
+                tools:ignore="TouchTargetSizeCheck" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/register_account_edit_box"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/edit_box_height"
+            android:background="@drawable/edit_box_border"
+            android:layout_marginTop="@dimen/register_edit_box_margin_top"
+            android:layout_marginLeft="@dimen/register_edit_box_margin_left"
+            android:layout_marginRight="@dimen/register_edit_box_margin_right"
+            android:paddingTop="@dimen/edit_box_padding_top"
+            android:paddingBottom="@dimen/edit_box_padding_bottom"
+            android:paddingLeft="@dimen/edit_box_padding_left"
+            android:paddingRight="@dimen/edit_box_padding_right"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/register_account_img"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginTop="@dimen/img_margin_top"
+                android:layout_marginBottom="@dimen/img_margin_bottom"
+                android:layout_marginLeft="@dimen/img_margin_left"
+                android:src="@drawable/account" />
+
+            <View
+                android:layout_width="@dimen/vertical_bar_width"
+                android:layout_height="@dimen/vertical_bar_height"
+                android:layout_gravity="center_vertical"
+                android:background="@color/black" />
+
+            <EditText
+                android:id="@+id/register_account_edit_text"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="@dimen/edit_text_margin_left"
+                android:hint="@string/register_phone_hint"
+                android:inputType="text"
+                style="@style/Edit_text"
+                tools:ignore="TouchTargetSizeCheck" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/register_verification_code_edit_box"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/edit_box_height"
+            android:background="@drawable/edit_box_border"
+            android:layout_marginTop="@dimen/register_edit_box_margin_top"
+            android:layout_marginLeft="@dimen/register_edit_box_margin_left"
+            android:layout_marginRight="@dimen/register_edit_box_margin_right"
+            android:paddingTop="@dimen/edit_box_padding_top"
+            android:paddingBottom="@dimen/edit_box_padding_bottom"
+            android:paddingLeft="@dimen/edit_box_padding_left"
+            android:paddingRight="@dimen/edit_box_padding_right"
+            android:orientation="horizontal">
+
+            <EditText
+                android:id="@+id/register_verification_code_edit_text"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="3"
+                android:layout_marginLeft="@dimen/edit_text_margin_left"
+                android:hint="@string/register_verification_hint"
+                android:inputType="text"
+                style="@style/Edit_text"
+                tools:ignore="TouchTargetSizeCheck" />
+
+            <Button
+                android:id="@+id/register_get_verification_code_btn"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="2"
+                android:text="@string/verification_code_btn"
+                android:gravity="center"
+                style="@style/Gradient_Rounded_Rectangle_Button">
+            </Button>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/register_pwd_edit_box"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/edit_box_height"
+            android:background="@drawable/edit_box_border"
+            android:layout_marginTop="@dimen/register_edit_box_margin_top"
+            android:layout_marginLeft="@dimen/register_edit_box_margin_left"
+            android:layout_marginRight="@dimen/register_edit_box_margin_right"
+            android:paddingTop="@dimen/edit_box_padding_top"
+            android:paddingBottom="@dimen/edit_box_padding_bottom"
+            android:paddingLeft="@dimen/edit_box_padding_left"
+            android:paddingRight="@dimen/edit_box_padding_right"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/register_pwd_img"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginTop="@dimen/img_margin_top"
+                android:layout_marginBottom="@dimen/img_margin_bottom"
+                android:layout_marginLeft="@dimen/img_margin_left"
+                android:src="@drawable/password" />
+
+            <View
+                android:layout_width="@dimen/vertical_bar_width"
+                android:layout_height="@dimen/vertical_bar_height"
+                android:layout_gravity="center_vertical"
+                android:background="@color/black" />
+
+            <EditText
+                android:id="@+id/register_pwd_edit_text"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="@dimen/edit_text_margin_left"
+                android:hint="@string/register_pwd_hint"
+                android:inputType="textPassword"
+                style="@style/Edit_text"
+                tools:ignore="TouchTargetSizeCheck" />
+        </LinearLayout>
+
+        <ImageButton
+            android:id="@+id/register_next_page_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/register_next_page_btn_margin_top"
+            android:layout_gravity="center_horizontal"
+            android:src="@drawable/next_page_btn"
+            android:background="@color/page_background"
+            android:clickable="true">
+        </ImageButton>
+    </androidx.appcompat.widget.LinearLayoutCompat>
+</FrameLayout>

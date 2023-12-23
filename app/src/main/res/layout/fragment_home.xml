@@ -1,0 +1,253 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:background="@color/page_background">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <com.google.android.material.appbar.MaterialToolbar
+            android:id="@+id/home_fragment_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/fragment_toolbar_title_height"
+            android:minHeight="?attr/actionBarSize"
+            app:title="@string/home_fragment_toolbar_title"
+            app:titleCentered="true"
+            app:titleTextAppearance="@style/Title_Font_MaterialToolbar"
+            app:menu="@menu/home_fragment_toolbar">
+        </com.google.android.material.appbar.MaterialToolbar>
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <LinearLayout
+        android:layout_width="@dimen/player_view_background_width"
+        android:layout_height="@dimen/player_view_background_height"
+        android:layout_marginTop="@dimen/home_fragment_margin_top"
+        android:orientation="vertical"
+        android:layout_gravity="center_horizontal"
+        style="@style/Player_Background">
+
+        <SurfaceView
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="20dp"
+            android:id="@+id/home_fragment_surface"
+            android:layout_width="@dimen/player_view_width"
+            android:layout_height="@dimen/player_view_height">
+        </SurfaceView>
+    </LinearLayout>
+
+    <ScrollView
+        android:id="@+id/home_fragment_scrollview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="@dimen/home_fragment_margin_top">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/line_chart_title_height"
+                android:layout_marginTop="@dimen/home_fragment_margin_top"
+                android:orientation="horizontal"
+                android:gravity="center">
+
+                <ImageView
+                    android:id="@+id/home_fragment_line_chart_img"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/time"
+                    android:background="@color/page_background">
+                </ImageView>
+
+                <TextView
+                    android:id="@+id/home_fragment_line_chart_title"
+                    style="@style/Leaf_TextView"
+                    android:layout_marginLeft="5dp"
+                    android:elevation="5dp"
+                    android:text="@string/home_fragment_line_chart_title"
+                    android:textSize="@dimen/line_chart_title_size"
+                    android:textColor="@color/black"
+                    android:fontFamily="@font/mashanzhengmaobikaishu">
+                </TextView>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/line_chart"
+                android:layout_marginTop="@dimen/home_fragment_margin_top">
+
+                <lecho.lib.hellocharts.view.LineChartView
+                    android:id="@+id/home_fragment_line_chart"
+                    android:layout_width="@dimen/line_chart_width"
+                    android:layout_height="@dimen/line_chart_height"
+                    android:layout_margin="10dp">
+                </lecho.lib.hellocharts.view.LineChartView>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/line_chart_title_height"
+                android:layout_marginTop="@dimen/home_fragment_margin_top"
+                android:orientation="horizontal"
+                android:gravity="center">
+
+                <ImageView
+                    android:id="@+id/home_fragment_real_time_data_img"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/real_time_data"
+                    android:background="@color/page_background">
+                </ImageView>
+
+                <TextView
+                    android:id="@+id/home_fragment_real_time_data_title"
+                    style="@style/Leaf_TextView"
+                    android:layout_marginLeft="5dp"
+                    android:elevation="5dp"
+                    android:text="@string/home_fragment_real_time_data_title"
+                    android:textSize="@dimen/line_chart_title_size"
+                    android:textColor="@color/black"
+                    android:fontFamily="@font/mashanzhengmaobikaishu">
+                </TextView>
+            </LinearLayout>
+
+            <LinearLayout
+                style="@style/Table_Linear"
+                android:layout_marginTop="@dimen/home_fragment_margin_top"
+                android:orientation="vertical"
+                android:elevation="5dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="@dimen/home_fragment_margin_top"
+                    android:layout_marginBottom="@dimen/table_row_data_margin_bottom"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/temperature"
+                        android:layout_marginLeft="@dimen/table_row_data_margin_left">
+                    </ImageView>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:text="@string/temperature"
+                        android:textSize="@dimen/home_fragment_title_size"
+                        android:textColor="@color/black"
+                        android:fontFamily="@font/mashanzhengmaobikaishu">
+                    </TextView>
+
+                    <TextView
+                        android:id="@+id/home_fragment_real_data_temperature"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="3"
+                        android:textSize="@dimen/home_fragment_title_size">
+                    </TextView>
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:background="#919191">
+                </View>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="@dimen/home_fragment_margin_top"
+                    android:layout_marginBottom="@dimen/table_row_data_margin_bottom"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/humidity"
+                        android:layout_marginLeft="@dimen/table_row_data_margin_left">
+                    </ImageView>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:text="@string/humidity"
+                        android:textSize="@dimen/home_fragment_title_size"
+                        android:textColor="@color/black"
+                        android:fontFamily="@font/mashanzhengmaobikaishu">
+                    </TextView>
+
+                    <TextView
+                        android:id="@+id/home_fragment_real_data_humidity"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:textSize="@dimen/home_fragment_title_size">
+                    </TextView>
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:background="#919191">
+                </View>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="@dimen/home_fragment_margin_top"
+                    android:layout_marginBottom="@dimen/table_row_data_margin_bottom"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/smoke"
+                        android:layout_marginLeft="@dimen/table_row_data_margin_left">
+                    </ImageView>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:text="@string/smoke"
+                        android:textSize="@dimen/home_fragment_title_size"
+                        android:textColor="@color/black"
+                        android:fontFamily="@font/mashanzhengmaobikaishu">
+                    </TextView>
+
+                    <TextView
+                        android:id="@+id/home_fragment_real_data_smoke"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:textSize="@dimen/home_fragment_title_size">
+                    </TextView>
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

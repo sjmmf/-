@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/info"
+        android:icon="@drawable/info"
+        android:title="@string/info"
+        app:showAsAction="always">
+    </item>
+
+    <item
+        android:id="@+id/home_item"
+        android:title="@string/home_item">
+    </item>
+
+    <item
+        android:id="@+id/device_item"
+        android:title="@string/device_item">
+    </item>
+
+    <item
+        android:id="@+id/setting_item"
+        android:title="@string/setting_item">
+    </item>
+</menu>
