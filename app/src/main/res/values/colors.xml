@@ -17,4 +17,5 @@
     <color name="hint_color">#8F8787</color>
     <color name="leaf_textview_color">#C6E7DC</color>
     <color name="table_background_color">#E0E0E0</color>
+    <color name="video_btn_background_color">#E9DCFC</color>
 </resources>

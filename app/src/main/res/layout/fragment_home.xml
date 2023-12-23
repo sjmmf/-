@@ -26,18 +26,63 @@
         android:layout_width="@dimen/player_view_background_width"
         android:layout_height="@dimen/player_view_background_height"
         android:layout_marginTop="@dimen/home_fragment_margin_top"
-        android:orientation="vertical"
         android:layout_gravity="center_horizontal"
+        android:orientation="vertical"
         style="@style/Player_Background">
 
         <SurfaceView
+            android:layout_marginTop="@dimen/home_fragment_margin_top"
             android:layout_gravity="center_horizontal"
-            android:layout_marginTop="20dp"
-            android:layout_marginBottom="20dp"
             android:id="@+id/home_fragment_surface"
             android:layout_width="@dimen/player_view_width"
             android:layout_height="@dimen/player_view_height">
         </SurfaceView>
+
+<!--        <RelativeLayout-->
+<!--            android:id="@+id/video_btn_bar"-->
+<!--            android:layout_width="@dimen/player_view_width"-->
+<!--            android:layout_height="@dimen/video_btn_bar_height"-->
+<!--            android:layout_marginTop="@dimen/home_fragment_margin_top"-->
+<!--            android:orientation="horizontal"-->
+<!--            android:layout_gravity="center_horizontal">-->
+
+<!--            <com.google.android.material.floatingactionbutton.FloatingActionButton-->
+<!--                android:id="@+id/video_stop_btn"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_gravity="center_vertical"-->
+<!--                android:layout_toLeftOf="@id/video_start_btn"-->
+<!--                android:layout_centerVertical="true"-->
+<!--                android:layout_marginRight="@dimen/video_btn_margin"-->
+<!--                app:elevation="3dp"-->
+<!--                android:src="@drawable/video_stop"-->
+<!--                android:backgroundTint="@color/video_btn_background_color">-->
+<!--            </com.google.android.material.floatingactionbutton.FloatingActionButton>-->
+
+<!--            <com.google.android.material.floatingactionbutton.FloatingActionButton-->
+<!--                android:id="@+id/video_start_btn"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_gravity="center_vertical"-->
+<!--                android:layout_centerInParent="true"-->
+<!--                app:elevation="3dp"-->
+<!--                android:src="@drawable/video_start"-->
+<!--                android:backgroundTint="@color/video_btn_background_color">-->
+<!--            </com.google.android.material.floatingactionbutton.FloatingActionButton>-->
+
+<!--            <com.google.android.material.floatingactionbutton.FloatingActionButton-->
+<!--                android:id="@+id/video_restart_btn"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_gravity="center_vertical"-->
+<!--                android:layout_toRightOf="@id/video_start_btn"-->
+<!--                android:layout_centerVertical="true"-->
+<!--                android:layout_marginLeft="@dimen/video_btn_margin"-->
+<!--                app:elevation="3dp"-->
+<!--                android:src="@drawable/video_restart"-->
+<!--                android:backgroundTint="@color/video_btn_background_color">-->
+<!--            </com.google.android.material.floatingactionbutton.FloatingActionButton>-->
+<!--        </RelativeLayout>-->
     </LinearLayout>
 
     <ScrollView
