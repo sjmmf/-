@@ -52,7 +52,7 @@
     <style name="Table_Linear">
         <item name="android:layout_width">@dimen/table_row_width</item>
         <item name="android:layout_height">wrap_content</item>
-        <item name="android:background">@color/table_background_color</item>
+        <item name="android:background">@drawable/rounded_data_table</item>
     </style>
 
     <style name="Player_Background">
@@ -62,6 +62,6 @@
 
     <style name="Title_Font_MaterialToolbar">
         <item name="android:fontFamily">@font/hanyixiaomaitijian</item>
-        <item name="android:textSize">@dimen/fragment_toolbar_title_size</item>
+        <item name="android:textSize">@dimen/toolbar_title_size</item>
     </style>
 </resources>

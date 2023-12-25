@@ -7,6 +7,7 @@
     <color name="teal_700">#FF018786</color>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+    <color name="red">#F43636</color>
 
     <!--下面是新添加的颜色-->
     <color name="my_light_primary">#6BDA6F</color>
@@ -16,6 +17,6 @@
     <color name="btn_1_end">#61C865</color>
     <color name="hint_color">#8F8787</color>
     <color name="leaf_textview_color">#C6E7DC</color>
-    <color name="table_background_color">#E0E0E0</color>
+    <color name="table_background_color">#FFF5EE</color>
     <color name="video_btn_background_color">#E9DCFC</color>
 </resources>

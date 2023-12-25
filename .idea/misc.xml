@@ -10,20 +10,27 @@
         <entry key="..\:/AndroidStudioProjects/Yamigo/app/src/main/res/drawable/line_chart.xml" value="0.27" />
         <entry key="..\:/AndroidStudioProjects/Yamigo/app/src/main/res/drawable/player_background.xml" value="0.118" />
         <entry key="..\:/AndroidStudioProjects/Yamigo/app/src/main/res/drawable/reminder_btn.xml" value="0.1" />
+        <entry key="..\:/AndroidStudioProjects/Yamigo/app/src/main/res/drawable/rounded_data_table.xml" value="0.2385" />
         <entry key="..\:/AndroidStudioProjects/Yamigo/app/src/main/res/drawable/rounded_rectangle_linear.xml" value="0.1" />
+        <entry key="..\:/AndroidStudioProjects/Yamigo/app/src/main/res/drawable/rounded_recycler_view_item_background.xml" value="0.1" />
+        <entry key="..\:/AndroidStudioProjects/Yamigo/app/src/main/res/layout/activity_info_center.xml" value="0.12222222222222222" />
         <entry key="..\:/AndroidStudioProjects/Yamigo/app/src/main/res/layout/activity_login.xml" value="0.3333333333333333" />
         <entry key="..\:/AndroidStudioProjects/Yamigo/app/src/main/res/layout/activity_main.xml" value="0.3333333333333333" />
         <entry key="..\:/AndroidStudioProjects/Yamigo/app/src/main/res/layout/activity_main2.xml" value="0.35520833333333335" />
         <entry key="..\:/AndroidStudioProjects/Yamigo/app/src/main/res/layout/activity_register.xml" value="0.16666666666666666" />
         <entry key="..\:/AndroidStudioProjects/Yamigo/app/src/main/res/layout/activity_test.xml" value="0.17249240121580547" />
         <entry key="..\:/AndroidStudioProjects/Yamigo/app/src/main/res/layout/fragment_device.xml" value="0.35520833333333335" />
-        <entry key="..\:/AndroidStudioProjects/Yamigo/app/src/main/res/layout/fragment_home.xml" value="0.14666666666666667" />
+        <entry key="..\:/AndroidStudioProjects/Yamigo/app/src/main/res/layout/fragment_home.xml" value="0.12222222222222222" />
         <entry key="..\:/AndroidStudioProjects/Yamigo/app/src/main/res/layout/fragment_information.xml" value="0.1" />
         <entry key="..\:/AndroidStudioProjects/Yamigo/app/src/main/res/layout/fragment_monitor.xml" value="0.1" />
         <entry key="..\:/AndroidStudioProjects/Yamigo/app/src/main/res/layout/fragment_sensor.xml" value="0.1" />
         <entry key="..\:/AndroidStudioProjects/Yamigo/app/src/main/res/layout/fragment_setting.xml" value="0.1" />
+        <entry key="..\:/AndroidStudioProjects/Yamigo/app/src/main/res/layout/info_center_recycler_view_items.xml" value="0.10891089108910891" />
         <entry key="..\:/AndroidStudioProjects/Yamigo/app/src/main/res/menu/home_fragment_toolbar.xml" value="0.21481481481481482" />
+        <entry key="..\:/AndroidStudioProjects/Yamigo/app/src/main/res/menu/home_fragment_toolbar_items.xml" value="0.16541353383458646" />
+        <entry key="..\:/AndroidStudioProjects/Yamigo/app/src/main/res/menu/info_center_toolbar_items.xml" value="0.25833333333333336" />
         <entry key="..\:/AndroidStudioProjects/Yamigo/app/src/main/res/menu/main_page_bottom_nav_menu.xml" value="0.22" />
+        <entry key="..\:/AndroidStudioProjects/Yamigo/app/src/main/res/menu/toolbar_items.xml" value="0.16541353383458646" />
       </map>
     </option>
   </component>

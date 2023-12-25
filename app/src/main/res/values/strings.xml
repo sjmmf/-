@@ -36,6 +36,7 @@
     <string name="home_item">主页</string>
     <string name="device_item">设备</string>
     <string name="setting_item">设置</string>
+    <string name="info_center">信息中心</string>
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_home_fragment">Hello Home fragment</string>
