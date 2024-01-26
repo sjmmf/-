@@ -1,14 +1,303 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:background="@color/page_background">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
-        android:id="@+id/fragment_setting_tv"
+    <com.google.android.material.appbar.AppBarLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_setting_fragment"
-        android:gravity="center"/>
+        android:layout_height="wrap_content"
+        android:background="@color/white">
 
+        <com.google.android.material.appbar.MaterialToolbar
+            android:id="@+id/setting_fragment_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/toolbar_height"
+            android:minHeight="?attr/actionBarSize"
+            app:title="@string/setting_fragment_toolbar_title"
+            app:titleCentered="true"
+            app:titleTextAppearance="@style/Title_Font_MaterialToolbar"
+            app:menu="@menu/setting_fragment_toolbar_items">
+        </com.google.android.material.appbar.MaterialToolbar>
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="horizontal"
+        android:gravity="center_vertical">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="@dimen/photo_card_size"
+            android:layout_height="@dimen/photo_card_size"
+            android:layout_marginTop="@dimen/setting_fragment_margin_top"
+            android:layout_marginBottom="@dimen/setting_fragment_margin_top"
+            android:layout_marginLeft="@dimen/photo_margin_left"
+            app:cardCornerRadius="40dp">
+
+            <ImageButton
+                android:id="@+id/setting_fragment_photo"
+                android:layout_width="@dimen/photo_add_size"
+                android:layout_height="@dimen/photo_add_size"
+                android:layout_gravity="center"
+                android:src="@drawable/photo_add"
+                android:background="@color/white">
+            </ImageButton>
+        </androidx.cardview.widget.CardView>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/photo_margin_right"
+            android:orientation="vertical"
+            android:gravity="start">
+
+            <TextView
+                android:id="@+id/setting_user_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="冷铭爽"
+                android:textSize="@dimen/setting_user_name_size"
+                android:textColor="@color/black"
+                android:fontFamily="@font/weiruanyahei">
+            </TextView>
+
+            <TextView
+                android:id="@+id/setting_user_phone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="3dp"
+                android:fontFamily="@font/weiruanyahei"
+                android:text="18982827227"
+                android:textColor="@color/gray"
+                android:textSize="@dimen/setting_user_phone_size">
+            </TextView>
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="@dimen/setting_items_background_width"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="@dimen/setting_fragment_margin_top"
+        android:background="@drawable/setting_background"
+        android:orientation="vertical">
+        
+        <RelativeLayout
+            android:id="@+id/account_and_safe"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/setting_item_height"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/account_and_safe_icon"
+                android:layout_centerVertical="true"
+                android:layout_width="@dimen/setting_item_icon_size"
+                android:layout_height="@dimen/setting_item_icon_size"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="@dimen/setting_item_icon_margin"
+                android:layout_marginRight="@dimen/setting_item_icon_margin"
+                android:src="@drawable/account_icon"
+                android:background="@color/white">
+            </ImageView>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@id/account_and_safe_icon"
+                android:text="@string/account_and_safe"
+                android:textSize="@dimen/setting_item_title_size"
+                android:textColor="@color/black"
+                android:fontFamily="@font/weiruanyahei">
+            </TextView>
+
+            <ImageButton
+                android:id="@+id/account_and_safe_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="5dp"
+                android:background="@color/white"
+                android:src="@drawable/next_btn">
+            </ImageButton>
+        </RelativeLayout>
+
+        <View
+            android:layout_width="@dimen/setting_item_divide_line_width"
+            android:layout_height="1dp"
+            android:layout_marginTop="@dimen/setting_item_divide_line_margin_top"
+            android:layout_marginBottom="@dimen/setting_item_divide_line_margin_top"
+            android:layout_marginLeft="@dimen/setting_item_divide_line_margin_left"
+            android:background="@color/page_background">
+        </View>
+
+        <RelativeLayout
+            android:id="@+id/privacy"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/setting_item_height"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/privacy_icon"
+                android:layout_centerVertical="true"
+                android:layout_width="@dimen/setting_item_icon_size"
+                android:layout_height="@dimen/setting_item_icon_size"
+                android:layout_marginLeft="@dimen/setting_item_icon_margin"
+                android:layout_marginRight="@dimen/setting_item_icon_margin"
+                android:src="@drawable/privacy"
+                android:background="@color/white">
+            </ImageView>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@id/privacy_icon"
+                android:text="@string/privacy"
+                android:textSize="@dimen/setting_item_title_size"
+                android:textColor="@color/black"
+                android:fontFamily="@font/weiruanyahei">
+            </TextView>
+
+            <ImageButton
+                android:id="@+id/privacy_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="5dp"
+                android:background="@color/white"
+                android:src="@drawable/next_btn">
+            </ImageButton>
+        </RelativeLayout>
+
+        <View
+            android:layout_width="@dimen/setting_item_divide_line_width"
+            android:layout_height="1dp"
+            android:layout_marginTop="@dimen/setting_item_divide_line_margin_top"
+            android:layout_marginBottom="@dimen/setting_item_divide_line_margin_top"
+            android:layout_marginLeft="@dimen/setting_item_divide_line_margin_left"
+            android:background="@color/page_background">
+        </View>
+
+        <RelativeLayout
+            android:id="@+id/callback"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/setting_item_height"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/callback_icon"
+                android:layout_centerVertical="true"
+                android:layout_width="@dimen/setting_item_icon_size"
+                android:layout_height="@dimen/setting_item_icon_size"
+                android:layout_marginLeft="@dimen/setting_item_icon_margin"
+                android:layout_marginRight="@dimen/setting_item_icon_margin"
+                android:src="@drawable/callback"
+                android:background="@color/white">
+            </ImageView>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@id/callback_icon"
+                android:text="@string/callback"
+                android:textSize="@dimen/setting_item_title_size"
+                android:textColor="@color/black"
+                android:fontFamily="@font/weiruanyahei">
+            </TextView>
+
+            <ImageButton
+                android:id="@+id/callback_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="5dp"
+                android:background="@color/white"
+                android:src="@drawable/next_btn">
+            </ImageButton>
+        </RelativeLayout>
+
+        <View
+            android:layout_width="@dimen/setting_item_divide_line_width"
+            android:layout_height="1dp"
+            android:layout_marginTop="@dimen/setting_item_divide_line_margin_top"
+            android:layout_marginBottom="@dimen/setting_item_divide_line_margin_top"
+            android:layout_marginLeft="@dimen/setting_item_divide_line_margin_left"
+            android:background="@color/page_background">
+        </View>
+
+        <RelativeLayout
+            android:id="@+id/about"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/setting_item_height"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/about_icon"
+                android:layout_centerVertical="true"
+                android:layout_width="@dimen/setting_item_icon_size"
+                android:layout_height="@dimen/setting_item_icon_size"
+                android:layout_marginLeft="@dimen/setting_item_icon_margin"
+                android:layout_marginRight="@dimen/setting_item_icon_margin"
+                android:src="@drawable/about"
+                android:background="@color/white">
+            </ImageView>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@id/about_icon"
+                android:text="@string/about"
+                android:textSize="@dimen/setting_item_title_size"
+                android:textColor="@color/black"
+                android:fontFamily="@font/weiruanyahei">
+            </TextView>
+
+            <ImageButton
+                android:id="@+id/about_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="5dp"
+                android:background="@color/white"
+                android:src="@drawable/next_btn">
+            </ImageButton>
+        </RelativeLayout>
+    </LinearLayout>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/login_another_btn"
+        android:layout_width="@dimen/setting_items_background_width"
+        android:layout_height="@dimen/setting_login_another_btn_height"
+        android:layout_marginTop="@dimen/setting_fragment_margin_top"
+        android:layout_gravity="center_horizontal"
+        android:background="@drawable/setting_background"
+        android:text="@string/login_another_btn_title"
+        android:textSize="@dimen/setting_item_title_size"
+        android:textColor="@color/gray"
+        android:fontFamily="@font/weiruanyahei">
+    </androidx.appcompat.widget.AppCompatButton>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/logout_btn"
+        android:layout_width="@dimen/setting_items_background_width"
+        android:layout_height="@dimen/setting_login_another_btn_height"
+        android:layout_marginTop="@dimen/setting_fragment_margin_top"
+        android:layout_gravity="center_horizontal"
+        android:background="@drawable/setting_background"
+        android:text="@string/logout_btn_title"
+        android:textSize="@dimen/setting_item_title_size"
+        android:textColor="@color/gray"
+        android:fontFamily="@font/weiruanyahei">
+    </androidx.appcompat.widget.AppCompatButton>
 </LinearLayout>

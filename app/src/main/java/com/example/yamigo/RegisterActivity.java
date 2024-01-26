@@ -73,6 +73,14 @@ public class RegisterActivity extends AppCompatActivity implements View.OnClickL
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_register);
 
+        init_view();
+
+        return_btn.setOnClickListener(this);
+        ver_btn.setOnClickListener(this);
+        next_btn.setOnClickListener(this);
+    }
+
+    private void init_view() {
         return_btn = findViewById(R.id.register_return_btn);
         username = findViewById(R.id.register_username_edit_text);
         phone = findViewById(R.id.register_account_edit_text);
@@ -80,18 +88,12 @@ public class RegisterActivity extends AppCompatActivity implements View.OnClickL
         ver_btn = findViewById(R.id.register_get_verification_code_btn);
         pwd = findViewById(R.id.register_pwd_edit_text);
         next_btn = findViewById(R.id.register_next_page_btn);
-
-        return_btn.setOnClickListener(this);
-        ver_btn.setOnClickListener(this);
-        next_btn.setOnClickListener(this);
     }
 
     @Override
     public void onClick(View v) {
         switch (v.getId()){
             case R.id.register_return_btn:
-                Intent intent_1 = new Intent(RegisterActivity.this, LoginActivity.class);
-                startActivity(intent_1);
                 finish();
                 break;
             case R.id.register_get_verification_code_btn:

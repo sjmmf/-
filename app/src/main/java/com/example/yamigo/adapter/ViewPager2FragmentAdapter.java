@@ -27,4 +27,5 @@ public class ViewPager2FragmentAdapter extends FragmentStateAdapter {
     public int getItemCount() {
         return fragmentList.size();
     }
+
 }

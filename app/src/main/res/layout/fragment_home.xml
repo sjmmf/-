@@ -37,6 +37,15 @@
             android:layout_width="@dimen/player_view_width"
             android:layout_height="@dimen/player_view_height">
         </SurfaceView>
+
+        <ImageView
+            android:id="@+id/video_player_btn"
+            android:layout_width="@dimen/video_player_btn_width"
+            android:layout_height="@dimen/video_player_btn_width"
+            android:layout_gravity="center"
+            android:src="@drawable/video_play"
+            android:clickable="true">
+        </ImageView>
     </FrameLayout>
 
     <ScrollView
@@ -77,45 +86,13 @@
                 </TextView>
             </LinearLayout>
 
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:background="@drawable/line_chart"
-                android:layout_marginTop="@dimen/home_fragment_margin_top">
-
-                <com.github.mikephil.charting.charts.LineChart
-                    android:id="@+id/home_fragment_line_chart"
-                    android:layout_width="@dimen/line_chart_width"
-                    android:layout_height="@dimen/line_chart_height"
-                    android:layout_margin="10dp">
-                </com.github.mikephil.charting.charts.LineChart>
-            </LinearLayout>
-
-<!--            <LinearLayout-->
-<!--                android:layout_width="match_parent"-->
-<!--                android:layout_height="@dimen/line_chart_title_height"-->
-<!--                android:layout_marginTop="@dimen/home_fragment_margin_top"-->
-<!--                android:orientation="horizontal"-->
-<!--                android:gravity="center">-->
-
-<!--                <ImageView-->
-<!--                    android:id="@+id/home_fragment_real_time_data_img"-->
-<!--                    android:layout_width="wrap_content"-->
-<!--                    android:layout_height="wrap_content"-->
-<!--                    android:src="@drawable/real_time_data"-->
-<!--                    android:background="@color/page_background">-->
-<!--                </ImageView>-->
-
-<!--                <TextView-->
-<!--                    android:id="@+id/home_fragment_real_time_data_title"-->
-<!--                    style="@style/Leaf_TextView"-->
-<!--                    android:layout_marginLeft="5dp"-->
-<!--                    android:text="@string/home_fragment_real_time_data_title"-->
-<!--                    android:textSize="@dimen/line_chart_title_size"-->
-<!--                    android:textColor="@color/black"-->
-<!--                    android:fontFamily="@font/mashanzhengmaobikaishu">-->
-<!--                </TextView>-->
-<!--            </LinearLayout>-->
+            <com.github.mikephil.charting.charts.LineChart
+                android:id="@+id/home_fragment_line_chart"
+                android:layout_width="@dimen/line_chart_width"
+                android:layout_height="@dimen/line_chart_height"
+                android:layout_marginTop="@dimen/home_fragment_margin_top"
+                android:background="@color/line_chart_background">
+            </com.github.mikephil.charting.charts.LineChart>
 
             <LinearLayout
                 style="@style/Table_Linear"

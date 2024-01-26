@@ -56,7 +56,7 @@
     </style>
 
     <style name="Player_Background">
-        <item name="android:background">@drawable/player_background</item>
+        <item name="android:background">@drawable/setting_background</item>
         <item name="android:elevation">3dp</item>
     </style>
 

@@ -38,6 +38,22 @@
     <string name="setting_item">设置</string>
     <string name="info_center">信息中心</string>
 
+    <string name="device_fragment_toolbar_title">设备信息</string>
+    <string name="device_fragment_temp_bar_chart_title">平均温度区间</string>
+    <string name="device_fragment_humi_bar_chart_title">平均湿度区间</string>
+    <string name="device_fragment_smok_bar_chart_title">平均烟雾区间</string>
+    <string name="temp_device">温度传感器</string>
+    <string name="humi_device">湿度传感器</string>
+    <string name="smok_device">烟雾传感器</string>
+
+    <string name="setting_fragment_toolbar_title">设置</string>
+    <string name="account_and_safe">账号与安全</string>
+    <string name="privacy">隐私</string>
+    <string name="callback">反馈与投诉</string>
+    <string name="about">关于</string>
+    <string name="login_another_btn_title">登录其他账号</string>
+    <string name="logout_btn_title">退出登录</string>
+
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_home_fragment">Hello Home fragment</string>
     <string name="hello_device_fragment">Hello Device fragment</string>

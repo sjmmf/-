@@ -73,11 +73,7 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
         setContentView(R.layout.activity_login);
 
         // 获取登录界面的组件
-        account = findViewById(R.id.login_account_edit_text);
-        pwd = findViewById(R.id.login_pwd_edit_text);
-        register_btn = findViewById(R.id.register_reminder);
-        forget_pwd_btn = findViewById(R.id.forget_pwd_reminder);
-        login_btn = findViewById(R.id.login_btn);
+        init_view();
 
         // 按钮监听器
         register_btn.setOnClickListener(this);
@@ -85,11 +81,21 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
         login_btn.setOnClickListener(this);
     }
 
+    private void init_view() {
+        account = findViewById(R.id.login_account_edit_text);
+        pwd = findViewById(R.id.login_pwd_edit_text);
+        register_btn = findViewById(R.id.register_reminder);
+        forget_pwd_btn = findViewById(R.id.forget_pwd_reminder);
+        login_btn = findViewById(R.id.login_btn);
+    }
+
+
     @Override
     public void onClick(View v) {
         switch (v.getId()){
             case R.id.login_btn:
                 checkPermission();
+                finish();
                 break;
             case R.id.forget_pwd_reminder:
                 // TODO：忘记密码
@@ -122,7 +128,7 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
                     OkHttpClient client = new OkHttpClient();
                     // 创建http请求
                     Request request = new Request.Builder()
-                            .url("http://113.54.232.23:12098/user/login")
+                            .url("http://113.54.231.165:12098/user/login")
                             .post(params.build())
                             .build();
                     Response response = client.newCall(request).execute();

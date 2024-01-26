@@ -8,6 +8,9 @@
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
     <color name="red">#F43636</color>
+    <color name="gray">#808080</color>
+    <color name="green">#2ADC32</color>
+    <color name="blue">#03A9F4</color>
 
     <!--下面是新添加的颜色-->
     <color name="my_light_primary">#6BDA6F</color>
@@ -19,4 +22,5 @@
     <color name="leaf_textview_color">#C6E7DC</color>
     <color name="table_background_color">#FFF5EE</color>
     <color name="video_btn_background_color">#E9DCFC</color>
+    <color name="line_chart_background">#CDE2F6</color>
 </resources>
